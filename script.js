@@ -14,6 +14,7 @@ let showComputerScore = document.querySelector(".computerScore");
 let anouncer = document.querySelector(".anouncer");
 btnStart.addEventListener("click", () => {
   playing = true;
+  btnStart.textContent = "restart";
   anouncer.style.fontSize = "16px";
   playerScore = 0;
   computerScore = 0;
@@ -79,7 +80,6 @@ let checkWinner = (playerScore, computerScore) => {
   if (playerScore == 5 || computerScore == 5) {
     playing = false;
     anouncer.style.fontSize = "60px";
-    btnStart.textContent = "restart";
     if (playerScore == 5) {
       anouncer.textContent = "PLAYER WINS!";
     } else {
